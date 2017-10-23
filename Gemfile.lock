@@ -170,7 +170,7 @@ GEM
     turbolinks-source (5.0.3)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2017.2)
+    tzinfo-data (1.2017.3)
       tzinfo (>= 1.0.0)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
@@ -189,7 +189,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  bootstrap (~> 4.0.0.beta2.1)
+  bootstrap (~> 4.0.0.alpha6)
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
