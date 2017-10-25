@@ -1,3 +1,7 @@
-h1 Main#index
-p Find me in app/views/main/index.html.slim
-p = session[:times]
+.container
+  h1 Главная страница сайта
+  p Find me in app/views/main/index.html.slim
+  p
+    | Кол-во обращений к сайту:
+    span
+      b = session[:times]

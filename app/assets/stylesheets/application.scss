@@ -15,3 +15,21 @@
  */
 
 @import "bootstrap";
+
+html, body, .wrapper{
+  height: 100%;
+}
+h1 {
+  text-align: center;
+}
+
+#content {
+  min-height: 100%;
+  padding-bottom: 60px;
+}
+
+#footer {
+  height:50px;
+  margin-top: -50px;
+}
+

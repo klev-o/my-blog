@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def year
-    2017
+    Time.now.year
   end
 
   def author

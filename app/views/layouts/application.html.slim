@@ -6,20 +6,10 @@ title MyBlog
 = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
 = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 body
-  .container
-    ul.nav
-      li.nav-item
-        a.nav-link.active[href="#"]
-          | Главная
-      li.nav-item
-        a.nav-link[href="#"]
-          | Обо мне
-      li.nav-item
-        a.nav-link[href="#"]
-          | Галерея
-  .container
-    = yield
-
-  .container
+  .wrapper
+    #content
+      header
+        = render 'main/header'
+      = yield
     div id="footer"
-      = render 'footer'
+      = render 'main/footer'
