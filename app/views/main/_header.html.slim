@@ -1,11 +1,8 @@
 .container
   ul.nav
     li.nav-item
-      a.nav-link.active[href="/main/index"]
-        | Главная
+      = link_to 'Главная', { controller: 'main'}, class: 'nav-link'
     li.nav-item
-      a.nav-link[href="/about/index"]
-        | Обо мне
+      = link_to 'Обо мне', { controller: 'about'}, class: 'nav-link'
     li.nav-item
-      a.nav-link[href="#"]
-        | Галерея
+      = link_to 'Галерея', { controller: 'gallery'}, class: 'nav-link'
