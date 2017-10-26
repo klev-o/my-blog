@@ -1,8 +1,8 @@
 .container
   ul.nav
     li.nav-item
-      = link_to 'Главная', { controller: 'main'}, class: 'nav-link'
+      = link_to 'Главная', root_path, class: 'nav-link'
     li.nav-item
-      = link_to 'Обо мне', { controller: 'about'}, class: 'nav-link'
+      = link_to 'Обо мне', about_index_path, class: 'nav-link'
     li.nav-item
-      = link_to 'Галерея', { controller: 'gallery'}, class: 'nav-link'
+      = link_to 'Галерея', gallery_index_path, class: 'nav-link'
