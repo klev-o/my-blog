@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  get '/posts/:key1/:key2', to: 'posts#index'
+  resources :users
+  #get '/posts/:key1/:key2', to: 'posts#index'
   resources :posts
   #resources :posts, except: :show
   resources :about, only: :index

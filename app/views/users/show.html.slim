@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @user.name
+p
+  strong Moderator:
+  = @user.moderator
+p
+  strong Creator:
+  = @user.creator
+p
+  strong Active:
+  = @user.active
+
+=> link_to 'Edit', edit_user_path(@user)
+'|
+=< link_to 'Back', users_path
