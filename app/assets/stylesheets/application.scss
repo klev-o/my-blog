@@ -16,6 +16,9 @@
 
 @import "bootstrap";
 
+body{
+  background-color: #f2f2f2;
+}
 html, body, .wrapper{
   height: 100%;
 }
@@ -31,5 +34,13 @@ h1,h2,h3 {
 #footer {
   height:50px;
   margin-top: -50px;
+}
+.img-content{
+  position: relative;
+  width: 190px;
+  margin: 0 auto;
+}
+.me-gamer{
+
 }
 

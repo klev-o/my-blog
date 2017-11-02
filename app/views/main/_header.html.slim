@@ -1,8 +1,18 @@
-.container
-  ul.nav
-    li.nav-item
-      = link_to 'Главная', root_path, class: 'nav-link'
-    li.nav-item
-      = link_to 'Обо мне', about_index_path, class: 'nav-link'
-    li.nav-item
-      = link_to 'Галерея', gallery_index_path, class: 'nav-link'
+nav.navbar.navbar-default.navbar-inverse[role="navigation"]
+  .container-fluid
+    .navbar-header
+      button.navbar-toggle[type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"]
+        span.sr-only
+          | Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      = link_to 'Главная', root_path, class: 'navbar-brand'
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      ul.nav.navbar-nav
+        li.active
+          = link_to 'Блог', posts_path, class: 'nav-link'
+        li
+          = link_to 'Обо мне', about_index_path
+        li
+          = link_to 'Галерея', gallery_index_path
