@@ -1,8 +1,10 @@
-h1 Editing post
+.container
+  .row
+    .col-md-6.col-md-offset-3
+      h1 Редактирование поста
 
-== render 'form'
+      == render 'form'
 
-=> link_to 'Show', @post
-'|
-=< link_to 'Back', posts_path
+      br
+      =< link_to 'Назад', posts_path, class: 'btn btn-default'
 

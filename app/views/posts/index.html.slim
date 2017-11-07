@@ -1,13 +1,13 @@
 .container
-  h1 Listing posts
+  h1 Немного почитаем
   = link_to 'Создать новый пост', new_post_path, class: 'btn btn-success btn-new-post'
   .row
     - @posts.each do |post|
-      .col-md-3
+      .col-md-3.col-sm-4.col-xs-12
         .block-post
           span
             | Заголовок:
-          h4 = post.title.slice(1,70).strip + '...'
+          h4 = post.title.slice(0,70).strip + '...'
           //td = post.body
           p
             b
