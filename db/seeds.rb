@@ -10,14 +10,13 @@ User.destroy_all
 Commentary.destroy_all
 
 require 'ffaker'
-#require "bcrypt"
 
 hash_users = 10.times.map do
-  email = FFaker::Internet.email
+  name = FFaker::Internet.user_name
   {
-      name: FFaker::Internet.user_name,
-      email: email,
-      password: email,
+      name: name,
+      email: FFaker::Internet.email,
+      password: name,
   }
 end
 

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  resources :users
+  #resources :users
   #get '/posts/:key1/:key2', to: 'posts#index'
 
   resources :posts

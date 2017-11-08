@@ -16,3 +16,25 @@ nav.navbar.navbar-default.navbar-inverse[role="navigation"]
           = link_to 'Обо мне', about_index_path
         li
           = link_to 'Галерея', gallery_index_path
+        - if user_signed_in?
+          li
+            = t('label.hello', name: current_user.name)
+        - else
+          li
+            = link_to 'Вход', new_user_session_path
+        li
+          = link_to 'Регистрация', new_user_registration_path
+        li
+          = link_to t('label.sign_out'), destroy_user_session_path, method: :delete
+- if user_signed_in?
+  div
+    = t('label.hello', name: current_user.name)
+  div
+    = link_to t('label.sign_out'), destroy_user_session_path, method: :delete
+- else
+  div
+    = link_to t('label.sign_in'), new_user_session_path
+  div
+    = link_to t('label.sign_up'), new_user_registration_path
+
+= user_signed_in?
