@@ -12,11 +12,11 @@ Commentary.destroy_all
 require 'ffaker'
 
 hash_users = 10.times.map do
-  name = FFaker::Internet.user_name
+  email = FFaker::Internet.email
   {
-      name: name,
-      email: FFaker::Internet.email,
-      password: name,
+      name: FFaker::Internet.user_name,
+      email: email,
+      password: email,
   }
 end
 
