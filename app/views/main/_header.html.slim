@@ -21,6 +21,8 @@ nav.navbar.navbar-default.navbar-inverse[role="navigation"]
         - if user_signed_in?
           li
             = link_to t('label.hello', name: current_user.name), destroy_user_session_path, method: :delete
+          li
+            = link_to t('label.edit'), edit_user_registration_path
         - else
           li
             = link_to 'Вход', new_user_session_path
