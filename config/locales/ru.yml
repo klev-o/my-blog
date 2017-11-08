@@ -1,2 +1,7 @@
 ru:
   hello: "Hello world"
+  label:
+    sign_in: 'Вход'
+    sign_up: 'Регистрация'
+    sign_out: 'Выход'
+    hello: 'Привет, %{name} (Выйти)'

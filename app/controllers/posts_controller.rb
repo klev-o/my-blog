@@ -1,6 +1,11 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :get_users_for_select
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action except: [:index, :show] do
+    #binding.pry
+    raise 'Пользователь не является модератором' unless current_user.moderator?
+  end
 
   # GET /posts
   # GET /posts.json

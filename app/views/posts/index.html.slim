@@ -14,8 +14,9 @@
               | Автор
             span = ': ' + post.user.name
           = link_to 'Читать далее', post
-          = link_to post, data: {confirm: 'Are you sure?'}, method: :delete, class: 'delete-post' do
-            = fa_icon 'times'
+          - if current_user&.moderator?
+            = link_to post, data: {confirm: 'Are you sure?'}, method: :delete, class: 'delete-post' do
+              = fa_icon 'times'
 
 
         //td = post.active

@@ -46,6 +46,9 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'ffaker'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'letter_opener'
 end
 
 group :development do
