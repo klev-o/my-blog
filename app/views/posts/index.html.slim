@@ -2,23 +2,7 @@
   h1 Немного почитаем
   = link_to 'Создать новый пост', new_post_path, class: 'btn btn-success btn-new-post'
   .row
-    - @posts.each do |post|
-      .col-md-3.col-sm-4.col-xs-12
-        .block-post
-          span
-            | Заголовок:
-          h4 = post.title.slice(0,70).strip + '...'
-          //td = post.body
-          p
-            b
-              | Автор
-            span = ': ' + post.user.name
-          = link_to 'Читать далее', post
-          - if current_user&.moderator?
-            = link_to post, data: {confirm: 'Are you sure?'}, method: :delete, class: 'delete-post' do
-              = fa_icon 'times'
-
-
+    = render partial: 'post', collection: @posts
         //td = post.active
         //td = link_to 'Show', post
         //td = link_to 'Edit', edit_post_path(post)

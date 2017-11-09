@@ -37,6 +37,7 @@ gem 'jquery-rails'
 gem 'will_paginate'
 gem 'devise'
 gem 'omniauth'
+gem 'omniauth-vkontakte'
 gem 'font-awesome-rails'
 
 group :development, :test do
@@ -49,6 +50,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'letter_opener'
+  gem 'xray-rails'
 end
 
 group :development do
